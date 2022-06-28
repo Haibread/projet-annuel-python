@@ -34,9 +34,9 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-@dm!n26}
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_SERVER_PROTOCOL=http
+      - GF_SERVER_SERVE_FROM_SUB_PATH=true
       - GF_SERVER_DOMAIN=
       - GF_SERVER_ROOT_URL=
-      - GF_SERVER_SERVE_FROM_SUB_PATH=true
     restart: unless-stopped
     ports:
       - '3000:3000'
@@ -66,11 +66,11 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DO_TOKEN=
-      - APP_ADMIN_EMAIL=
-      - APP_ADMIN_PASS=
-      - APP_URL=
-      - MONITORING_URL=
+      - DO_TOKEN=dop_xxx
+      - APP_ADMIN_EMAIL=example@example.com
+      - APP_ADMIN_PASS=changemeplease
+      - APP_URL=https://example2.com
+      - MONITORING_URL=https://example.com
 
 networks:
   monitoring:
